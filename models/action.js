@@ -4,7 +4,7 @@ const Action = new Schema(
   {
     name: {type: String, isDone: Boolean, required: true},
     description: {type: String, required: true},
-    emotionRef: {type: Schema.Types.ObjectId, ref: 'emotion_id', required: true}
+    emotionRef: {type: Schema.Types.ObjectId, ref: "emotions", required: true}
   },
   { timestamps: true }
 )

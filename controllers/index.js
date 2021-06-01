@@ -1,8 +1,8 @@
-const Action = require('../models/action');
+const { Action } = require('../models/index');
 
 const createAction = async (req, res) => {
     try {
-        const action = await new Action(req.body)
+        const action = await new Action({...req.body, emotionRef: req.params.emotionID})
         await action.save()
         return res.status(201).json({
             action,

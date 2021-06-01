@@ -2,13 +2,13 @@ const { Router } = require('express');
 const controllers = require('../controllers')
 const router = Router();
 
-router.get('/', (req, res) => res.send('This is root!'))
+router.get('/', (req, res) => res.send('This is the root of GratitudeAPPtitude!'))
 
 router.get('/actions', controllers.getAllActions)
 
-router.post('/action', controllers.createAction)
+router.post('/action/:emotionID', controllers.createAction)
 
-router.get('/action/:id', controllers.getActionById)
+router.get('/actions/:id', controllers.getActionById)
 
 router.put('/actions/:id', controllers.updateAction)
 
