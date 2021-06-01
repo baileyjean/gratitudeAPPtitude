@@ -1,14 +1,12 @@
-const mongoose = require('mongoose')
-const emotion = require('./emotion')
-const Schema = mongoose.Schema
+const { Schema } = require('mongoose')
 
 const Action = new Schema(
   {
     name: {type: String, isDone: Boolean, required: true},
     description: {type: String, required: true},
-    emotionRef: {type: Schema.Types.ObjectId, ref: emotion, required: true}
+    emotionRef: {type: Schema.Types.ObjectId, ref: 'emotion_id', required: true}
   },
   { timestamps: true }
 )
 
-module.exports = mongoose.model('actions', Action)
+module.exports = Action;
