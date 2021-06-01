@@ -1,0 +1,29 @@
+{
+  "name": "gratitudeAPPtitude",
+  "version": "1.0.0",
+  "description": "The concept and implementation for Gratitude APPtitude was created between 29 May - 04 Jun 2021.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baileyjean/gratitudeAPPtitude.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baileyjean/gratitudeAPPtitude/issues"
+  },
+  "homepage": "https://github.com/baileyjean/gratitudeAPPtitude#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.12",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
