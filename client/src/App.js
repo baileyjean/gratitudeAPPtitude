@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { BASE_URL } from './globals';
-import './styles/App.css';
+import './App.css';
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router';
 import Nav from './components/Nav';
@@ -11,6 +11,7 @@ export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      emotions: ['Happy', 'Sad', 'Anger', 'Disgust'],
       actionItems: [],
       gratitudeLists: [],
       readingLists: [],
@@ -43,8 +44,8 @@ export default class App extends Component {
         <Nav />
         <main>
           <Switch>
-            <Route exact path="/" component={ LandingPage } />
-            <Route path="/ChooseFeels" component={ ChooseFeels } />
+            <Route exact path="/"       component = { LandingPage } />
+            <Route path="/ChooseFeels"  component = {(props) => ( <ChooseFeels {...props} emotions = {this.state.emotions} /> )}/>
           </Switch>
         </main>
       </div>
