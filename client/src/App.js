@@ -47,16 +47,22 @@ export default class App extends Component {
       switch (actionables[i].name) {
         case 'gratitudeList':
           this.state.gratitudeLists.push(actionables[i])
-          break
-          case 'readingList':
-            this.state.readingLists.push(actionables[i])
-            break
-            case 'actionList':
-              this.state.actionLists.push(actionables[i])
-              break
-              default:
-              }
-            }
+          break;
+        case 'readingList':
+          this.state.readingLists.push(actionables[i])
+          break;
+        case 'actionList':
+          this.state.actionLists.push(actionables[i])
+          break;
+        default:
+      }
+    }
+    
+    console.log(`Actionables from backend: `, this.state.actionables)
+    console.log(`gratitudeLists: `, this.state.gratitudeLists)
+    console.log(`readingLists: `, this.state.readingLists)
+    console.log(`actionLists: `, this.state.actionLists)
+    
     return (
       <div className="App">
         <header>
