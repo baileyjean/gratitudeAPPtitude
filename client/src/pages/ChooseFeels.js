@@ -11,9 +11,11 @@ export default class ChooseFeels extends Component {
     })
     
     return (
-      <div className="emotionsList">
-        {emotionsList}
+      <div className="container">
+        <div className="emotionsList">
+          {emotionsList}
+        </div>
       </div>
-    )
+      )
   }
 }

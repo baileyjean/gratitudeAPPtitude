@@ -22,6 +22,29 @@ header {
   justify-content: space-evenly;
 }
 
+.container {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1em;
+}
+
+.landingPage {
+  width: 50%;
+  margin-top: 10vh;
+  background: rgba(255, 255, 255,0.7);
+  border-radius: 5px;
+  color:black;
+  padding: 10px 16px;
+  text-align: center;
+}
+
+button {
+  margin-top: 10vh;
+}
+
 .emotions {
   display: flex;
   flex-flow: row wrap;
@@ -34,6 +57,7 @@ header {
   display: flex;
   justify-content: space-evenly;
   margin-left: -15%;
+  
 }
 
 .nav a {
@@ -42,6 +66,7 @@ header {
   justify-content: center;
   text-decoration: none;
   margin: 25px;
+  color: white;
 }
 
 .nav a span {
@@ -54,9 +79,4 @@ header {
 .nav a:focus {
   color: gold;
   margin: 23px 25px;
-}
-
-.nav a:focus span:after {
-  content: '︿';
-  position: absolute;
 }
