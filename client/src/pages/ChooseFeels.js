@@ -5,11 +5,11 @@ export default class ChooseFeels extends Component {
   render() {
     const emotions = this.props.emotions
     const emotionsList = emotions.map((emotion, index) => (
-      <EmotionsCard key={index} emotion={emotion} />
+      <EmotionsCard key = {index} emotion = {emotion} />
     ))
     console.log(emotionsList)
     return (
-      <div>
+      <div className="emotionsList">
         {emotionsList}
       </div>
     )

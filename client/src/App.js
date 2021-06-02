@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { BASE_URL } from './globals';
 import './App.css';
 import React, { Component } from 'react';
@@ -20,34 +19,40 @@ export default class App extends Component {
   }
 
   async componentDidMount() {
-    const res = await axios.get(`${BASE_URL}/actions`)
+    const res = await BASE_URL.get(`/actions`)
     this.setState({ actionItems: res.data.actions })
   }
 
   render() {
     for (let i = 0; i < this.state.actionItems.length; i++) {
-      switch (this.state.actionItems[i].type) {
+      switch (this.state.actionItems[i].name) {
         case 'gratitudeList':
           this.state.gratitudeLists.push(this.state.actionItems[i])
           break
-        case 'readingList':
-          this.state.readingLists.push(this.state.actionItems[i])
-          break
-        case 'actionList':
-          this.state.actionLists.push(this.state.actionItems[i])
-          break
-        default:
-      }
-    }
+          case 'readingList':
+            this.state.readingLists.push(this.state.actionItems[i])
+            break
+            case 'actionList':
+              this.state.actionLists.push(this.state.actionItems[i])
+              break
+              default:
+              }
+            }
+    console.log(`Console log from App.js >> between render() & return():`)
+    console.log(`GRATITUDE LIST: ${this.state.gratitudeLists}`)
+    console.log(`GRATITUDE LIST: ${this.state.readingLists}`)
+    console.log(`GRATITUDE LIST: ${this.state.actionLists}`)
     return (
-      <div>
-        <Nav />
-        <main>
+      <div className="App">
+        <header>
+          <Nav />
+        </header>
+        <div>
           <Switch>
-            <Route exact path="/"       component = { LandingPage } />
-            <Route path="/ChooseFeels"  component = {(props) => ( <ChooseFeels {...props} emotions = {this.state.emotions} /> )}/>
+            <Route exact path="/" component = { LandingPage } />
+            <Route path="/ChooseFeels" component = {(props) => ( <ChooseFeels {...props} emotions = {this.state.emotions} /> )}/>
           </Switch>
-        </main>
+        </div>
       </div>
     )
   }
