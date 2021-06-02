@@ -3,6 +3,7 @@
   flex-direction: column;
   text-align: center;
   margin: 0;
+  background-color: #282c34;
 }
 
 .App-header {
@@ -21,7 +22,41 @@ header {
   justify-content: space-evenly;
 }
 
-.emotionsList {
-  display: grid;
-  grid-template-columns: ;
+.emotions {
+  display: flex;
+  flex-flow: row wrap;
+  width: 80%;
+  margin: 0;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: -15%;
+}
+
+.nav a {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-decoration: none;
+  margin: 25px;
+}
+
+.nav a span {
+  width: 100%;
+  margin-top: -25px;
+  margin-left: 30%;
+  padding: 0;
+}
+
+.nav a:focus {
+  color: gold;
+  margin: 23px 25px;
+}
+
+.nav a:focus span:after {
+  content: '︿';
+  position: absolute;
 }
