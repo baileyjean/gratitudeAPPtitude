@@ -10,7 +10,24 @@ export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      emotions: ['Happy', 'Sad', 'Anger', 'Disgust'],
+      emotions: [
+        {
+          name: "Happy",
+          description: "This is happiness"
+        }, 
+        {
+          name: "Sad",
+          description: "This is sadness"
+        },
+        {
+          name: "Anger",
+          description: "This is anger"
+        },
+        {
+          name: "Disgust",
+          description: "This is disgust"
+        }
+      ],
       actionables: [],
       gratitudeLists: [],
       readingLists: [],

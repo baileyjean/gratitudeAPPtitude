@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 
 export default class EmotionCard extends Component {
   render() {
-    const { emotion } = this.props
+    const { emotions } = this.props
+    console.log(`emotions from EmotionsCard`, emotions)
+    console.log(`EMOTIONSCARD: emotions.name >> `, emotions.name)
     return (
       <div className="emotionCard">
-        <h1>{emotion}</h1>
+        <h1>{emotions.name}</h1>
       </div>
     )
   }
