@@ -6,7 +6,7 @@ export default class Nav extends Component {
     return (
       <nav>
         <div className="nav">
-          <NavLink to="/">Landing Page</NavLink>
+          <NavLink to="/">Welcome to Gratitude APPtitude</NavLink>
           <NavLink to="/choosefeels">How Are You Feeling Today?</NavLink>
         </div>
       </nav>

@@ -4,7 +4,6 @@ import EmotionsCard from '../components/EmotionsCard';
 export default class ChooseFeels extends Component {
   render() {
     const emotions = this.props.emotions
-    console.log(`Console logging from ChooseFeels.js: `, this.props.emotions)
 
     const emotionsList = emotions.map((emotion, index) => {
       return <EmotionsCard key = {index} emotion = {emotion} />
@@ -12,7 +11,7 @@ export default class ChooseFeels extends Component {
     
     return (
       <div className="container">
-        <div className="emotionsList">
+        <div className="emotions">
           {emotionsList}
         </div>
       </div>

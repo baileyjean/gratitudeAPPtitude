@@ -4,9 +4,9 @@ export default class EmotionCard extends Component {
   render() {
     const { emotion } = this.props
     return (
-      <div className="emotions">
-        <h3>{emotion}</h3>
-      </div >
+      <div className="emotionCard">
+        <h1>{emotion}</h1>
+      </div>
     )
   }
 }
