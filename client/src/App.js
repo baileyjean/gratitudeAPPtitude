@@ -18,6 +18,15 @@ export default class App extends Component {
     }
   }
 
+  deleteComment = async (id) => {
+    try {
+      await BASE_URL.delete(`/comment/${id}`)
+    } catch (error) {
+      throw error
+    }
+  }
+
+
   async componentDidMount() {
     const resActionables = await BASE_URL.get(`/actions`)
     const resEmotions = await BASE_URL.get(`/emotions`)

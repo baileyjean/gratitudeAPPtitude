@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
+
 export default class LandingPage extends Component {
   render() {
+    console.log(this.props.comments)
     return (
       <div className="container">
         <div className="landingPage">
@@ -21,6 +23,25 @@ export default class LandingPage extends Component {
             <button>Continue</button>
           </a>
         </div>
+
+
+        <div>
+          <div>
+            {this.props.comments.map((comment, index) => (
+              <div key={index}>
+                <p>{comment.comment}</p>
+                <button>
+
+                </button>
+              </div>
+            ))}
+          </div>
+          <form>
+            <input></input>
+          </form>
+        </div>
+
+
       </div>
     );
   }
