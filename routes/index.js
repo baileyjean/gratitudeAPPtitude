@@ -18,6 +18,6 @@ router.get('/ratings', controllers.getAllRatings)
 
 router.post('/rating/:id', controllers.submitRating)
 
-router.delete('/ratings/:id', controllers.deleteRating)
+router.delete('/rating/:id', controllers.deleteRating)
 
 module.exports = router;
