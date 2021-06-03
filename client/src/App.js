@@ -11,46 +11,31 @@ export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      emotions: [
-        {
-          name: "Happy",
-          description: "This is happiness"
-        }, 
-        {
-          name: "Sad",
-          description: "This is sadness"
-        },
-        {
-          name: "Anger",
-          description: "This is anger"
-        },
-        {
-          name: "Disgust",
-          description: "This is disgust"
-        }
-      ],
+      emotions: [],
       actionables: [],
+      comments: [],
       gratitudeLists: [],
       readingLists: [],
       actionLists: [],
-      comments: [],
       myFeels: ''
     }
   }
 
   async componentDidMount() {
-    const res = await BASE_URL.get(`/actions`)
-    // const res = await BASE_URL.get(`/actions`)
-    // const res = await BASE_URL.get(`/actions`)
-    // this.setState({ actionables: res.data.actions })
-    // this.setState({ actionables: res.data.actions })
-    this.setState({ actionables: res.data.actions })
+    const resActionables = await BASE_URL.get(`/actions`)
+    const resEmotions = await BASE_URL.get(`/emotions`)
+    const resComments = await BASE_URL.get(`/comments`)
+    this.setState({ actionables: resActionables.data.actions })
+    this.setState({ emotions: resEmotions.data.emotions })
+    this.setState({ comments: resComments.data.comments })
   }
 
   render() {
     const actionables = this.state.actionables;
     // if the loop below gives problems down the road, try using a resetState on each list
-
+    console.log(`AXIOS CALL - Emotions: `, this.state.emotions)
+    console.log(`AXIOS CALL - Actionables: `, actionables)
+    console.log(`AXIOS CALL - Comments: `, this.state.comments)
     for (let i = 0; i < actionables.length; i++) {
       switch (actionables[i].name) {
         case 'gratitudeList': 
