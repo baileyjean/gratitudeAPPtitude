@@ -5,6 +5,7 @@ import { Route, Switch } from 'react-router';
 import Nav from './components/Nav';
 import LandingPage from './pages/LandingPage';
 import ChooseFeels from './pages/ChooseFeels';
+import Validation from './pages/Validation';
 
 export default class App extends Component {
   constructor(props) {
@@ -31,7 +32,8 @@ export default class App extends Component {
       actionables: [],
       gratitudeLists: [],
       readingLists: [],
-      actionLists: []
+      actionLists: [],
+      myFeels: ''
     }
   }
 
@@ -68,7 +70,8 @@ export default class App extends Component {
         <div>
           <Switch>
             <Route exact path="/" component = { LandingPage } />
-            <Route path="/choosefeels" component = {(props) => ( <ChooseFeels {...props} emotions = {this.state.emotions} /> )}/>
+            <Route path="/choose-feels" component = {(props) => ( <ChooseFeels {...props} emotions = {this.state.emotions} myFeels = {this.state.myFeels} /> )}/>
+            <Route path="/validation" component = {(props) => ( <Validation {...props} emotions = {this.state.emotions} myFeels = {this.state.myFeels}/> )}/>
           </Switch>
         </div>
       </div>

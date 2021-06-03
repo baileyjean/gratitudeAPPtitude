@@ -17,7 +17,7 @@ export default class LandingPage extends Component {
             <p>The hope behind Gratitude APPtitude is that continued use will help you change your perspective and grow your "aptitude for gratitude," thereby improving your mental health.</p>
             <br />
           </div>
-          <a href="/choosefeels">
+          <a href="/choose-feels">
             <button>Continue</button>
           </a>
         </div>
