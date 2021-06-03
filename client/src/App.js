@@ -31,6 +31,7 @@ export default class App extends Component {
       emotions: resEmotions.data.emotions, 
       comments: resComments.data.comments 
     },
+    // executes a callback once state has been set up!
     () => {
       this.setState({loading: false})
     })
@@ -68,12 +69,11 @@ export default class App extends Component {
           <Switch>
             <Route exact path="/" component = { LandingPage } />
 
-            <Route path="/choose-feels" component = {(props) => 
-              this.state.loading ? <div>Loading</div> : ( 
-                <ChooseFeels {...props} 
-                  emotions = {this.state.emotions}
-                /> 
-              )}/>
+            <Route path="/choose-feels" component = {(props) => ( 
+              <ChooseFeels {...props} 
+                emotions = {this.state.emotions}
+              /> 
+            )}/>
 
             <Route path="/emotions/:id" component = {(props) => ( 
               <Validation {...props} 
