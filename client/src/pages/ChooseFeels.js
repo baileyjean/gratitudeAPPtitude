@@ -3,7 +3,6 @@ import EmotionCards from '../components/EmotionCards';
 
 export default class ChooseFeels extends Component {
   render() {
-    console.log(this.props)
     return (
       <div className="chooseFeelsContainer">
         <h1>Identify, Accept, then Select:</h1>

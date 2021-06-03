@@ -53,6 +53,7 @@ export default class App extends Component {
             <Route path="/emotions/:id" component = {(props) => ( 
               <Validation {...props} 
                 emotions = {this.state.emotions}
+                actionables = {this.state.actionables}
               /> 
             )}/>
           </Switch>
