@@ -31,11 +31,11 @@ export default class App extends Component {
   }
 
   render() {
+    console.log(`AXIOS CALL - Emotions: `, this.state.emotions)
+    console.log(`AXIOS CALL - Actionables: `, this.state.actionables)
+    console.log(`AXIOS CALL - Comments: `, this.state.comments)
     const actionables = this.state.actionables;
     // if the loop below gives problems down the road, try using a resetState on each list
-    console.log(`AXIOS CALL - Emotions: `, this.state.emotions)
-    console.log(`AXIOS CALL - Actionables: `, actionables)
-    console.log(`AXIOS CALL - Comments: `, this.state.comments)
     for (let i = 0; i < actionables.length; i++) {
       switch (actionables[i].name) {
         case 'gratitudeList': 

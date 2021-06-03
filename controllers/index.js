@@ -108,6 +108,20 @@ const getAllEmotions = async (req, res) => {
     }
 }
 
+const getEmotionById = async(req,res) => {
+    try {
+        const {id} = req.params;
+        const emotion = await Emotion.findById(id)
+
+        if(emotion){
+            return res.status(200).json({emotion});
+        }
+        return res.status(404).send(`Emotion with the specified ID does not exist`)
+    } catch(error){
+        return res.status(500).send(error.message)
+    }
+}
+
 module.exports = {
     createAction,
     getAllActions,
@@ -117,5 +131,6 @@ module.exports = {
     getAllComments,
     submitComment,
     deleteComment,
-    getAllEmotions
+    getAllEmotions,
+    getEmotionById
 }

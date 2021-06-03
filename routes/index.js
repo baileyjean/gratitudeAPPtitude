@@ -22,4 +22,6 @@ router.delete('/comment/:id', controllers.deleteComment)
 
 router.get('/emotions', controllers.getAllEmotions)
 
+router.get('/emotions/:id', controllers.getEmotionById)
+
 module.exports = router;
