@@ -2,7 +2,7 @@ const { Schema } = require('mongoose')
 
 const Rating = new Schema(
   {
-    name: {type: Number}
+    rating: {type: Number}
   },
   { timestamps: true }
 )

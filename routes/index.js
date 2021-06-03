@@ -14,4 +14,10 @@ router.delete('/actions/:id', controllers.deleteAction)
 
 router.put('/actions/:id', controllers.updateAction)
 
+router.get('/ratings', controllers.getAllRatings)
+
+router.post('/rating/:id', controllers.submitRating)
+
+router.delete('/ratings/:id', controllers.deleteRating)
+
 module.exports = router;

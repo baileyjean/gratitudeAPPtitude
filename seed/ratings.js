@@ -5,8 +5,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
   const ratings = [
-    {
-      rating: 5
+    { rating: 5 }
   ]
 
   await Rating.insertMany(ratings)
