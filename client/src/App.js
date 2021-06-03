@@ -42,10 +42,16 @@ export default class App extends Component {
         </header>
         <div>
           <Switch>
-            <Route exact path="/" component = { LandingPage } />
+            <Route exact path="/" component = {(props) => (
+              <LandingPage 
+                {...props}
+                comments = {this.state.comments}
+              />
+            )}/>
 
             <Route path="/choose-feels" component = {(props) => ( 
-              <ChooseFeels {...props} 
+              <ChooseFeels 
+                {...props} 
                 emotions = {this.state.emotions}
               /> 
             )}/>
