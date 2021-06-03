@@ -30,8 +30,8 @@ export default class LandingPage extends Component {
             {this.props.comments.map((comment, index) => (
               <div key={index}>
                 <p>{comment.comment}</p>
-                <button>
-
+                <button onClick = {() => this.props.deleteComment(comment._id)}>
+                  Delete
                 </button>
               </div>
             ))}

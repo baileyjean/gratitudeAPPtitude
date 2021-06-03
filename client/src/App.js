@@ -19,8 +19,9 @@ export default class App extends Component {
   }
 
   deleteComment = async (id) => {
+    console.log(id)
     try {
-      await BASE_URL.delete(`/comment/${id}`)
+      //await BASE_URL.delete(`/comment/${id}`)
     } catch (error) {
       throw error
     }
@@ -55,6 +56,7 @@ export default class App extends Component {
               <LandingPage 
                 {...props}
                 comments = {this.state.comments}
+                deleteComment = {this.deleteComment}
               />
             )}/>
 
