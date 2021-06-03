@@ -3,8 +3,11 @@ import React, { Component } from 'react';
 
 export default class ActionableCards extends Component {
   render() {
-    // const { emotions } = this.props
-    // const myFeels = this.props.myFeels
+    console.log(`From ActionableCards:`, this.props)
+
+    // use axios call to grab action by emotionRef
+    // comparison logic to look at emotionRef of path & emotionRef FROM axios call
+
     return (
       <div>
         Yo what up with it

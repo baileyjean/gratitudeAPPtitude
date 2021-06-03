@@ -16,9 +16,7 @@ export default class App extends Component {
       comments: [],
       gratitudeLists: [],
       readingLists: [],
-      actionLists: [],
-      myFeelsID: '',
-      myFeel: ''
+      actionLists: []
     }
   }
 
@@ -26,22 +24,20 @@ export default class App extends Component {
     const resActionables = await BASE_URL.get(`/actions`)
     const resEmotions = await BASE_URL.get(`/emotions`)
     const resComments = await BASE_URL.get(`/comments`)
-    this.setState({ actionables: resActionables.data.actions })
-    this.setState({ emotions: resEmotions.data.emotions })
-    this.setState({ comments: resComments.data.comments })
-  }
-
-  getEmotionID = async (id) => {
-    const res = await BASE_URL.get(`/emotions/${id}`)
-    this.setState({ myFeelsID: res.data.results })
+    
+    this.setState({ 
+      actionables: resActionables.data.actions, 
+      emotions: resEmotions.data.emotions, 
+      comments: resComments.data.comments 
+    })
   }
 
   render() {
-    console.log(`AXIOS CALL - Emotions: `, this.state.emotions)
-    console.log(`AXIOS CALL - Actionables: `, this.state.actionables)
-    console.log(`AXIOS CALL - Comments: `, this.state.comments)
     const actionables = this.state.actionables;
-    // if the loop below gives problems down the road, try using a resetState on each list
+    this.setState.gratitudeLists = []
+    this.setState.readingLists = []
+    this.setState.actionLists = []
+
     for (let i = 0; i < actionables.length; i++) {
       switch (actionables[i].name) {
         case 'gratitudeList': 
@@ -57,7 +53,7 @@ export default class App extends Component {
           break;
       }
     }
-    
+
     return (
       <div className="App">
         <header>
@@ -68,15 +64,12 @@ export default class App extends Component {
             <Route exact path="/" component = { LandingPage } />
             <Route path="/choose-feels" component = {(props) => ( 
               <ChooseFeels {...props} 
-                emotions = {this.state.emotions} 
-                myFeels = {this.state.myFeels}
-                myFeelsID = {this.state.myFeelsID}
+                emotions = {this.state.emotions}
               /> 
             )}/>
-            <Route path="/validation" component = {(props) => ( 
+            <Route path="/emotions/:id" component = {(props) => ( 
               <Validation {...props} 
-                emotions = {this.state.emotions} 
-                myFeels = {this.state.myFeels}
+                emotions = {this.state.emotions}
               /> 
             )}/>
           </Switch>

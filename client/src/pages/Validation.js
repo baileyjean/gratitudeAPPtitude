@@ -3,13 +3,17 @@ import ActionableCards from '../components/ActionableCards';
 
 export default class Validation extends Component {
   render() {
-    const emotions = this.props.emotions
-    const myFeels = this.props.myFeels
+    const { emotions } = this.props;
+    const emotionRef = this.props.match.params.id;
+    console.log(this.props)
     return (
       <div className="container">
         <div className="valid">
           Your feelings are valid.
-          <ActionableCards emotions = {emotions} myFeels = {myFeels} />
+          <ActionableCards 
+            emotions = {emotions} 
+            emotionRef = {emotionRef}
+          />
         </div>
         <br />
         <a href="/choose-feels">
