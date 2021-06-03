@@ -42,10 +42,11 @@ export default class App extends Component {
 
   render() {
     const actionables = this.state.actionables;
+    // if the loop below gives problems down the road, try using a resetState on each list
 
     for (let i = 0; i < actionables.length; i++) {
       switch (actionables[i].name) {
-        case 'gratitudeList':
+        case 'gratitudeList': 
           this.state.gratitudeLists.push(actionables[i])
           break;
         case 'readingList':
@@ -55,13 +56,9 @@ export default class App extends Component {
           this.state.actionLists.push(actionables[i])
           break;
         default:
+          break;
       }
     }
-    
-    console.log(`Actionables from backend: `, this.state.actionables)
-    console.log(`gratitudeLists: `, this.state.gratitudeLists)
-    console.log(`readingLists: `, this.state.readingLists)
-    console.log(`actionLists: `, this.state.actionLists)
     
     return (
       <div className="App">

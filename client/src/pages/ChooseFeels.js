@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import EmotionsCard from '../components/EmotionsCard';
+import EmotionCards from '../components/EmotionCards';
 
 export default class ChooseFeels extends Component {
   render() {
     const emotions = this.props.emotions
     return (
       <div>
-        <EmotionsCard emotions = {emotions} />
+        <EmotionCards emotions = {emotions} />
       </div>
       )
   }

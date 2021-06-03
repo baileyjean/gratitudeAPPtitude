@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class EmotionCard extends Component {
+export default class EmotionCards extends Component {
   render() {
     const { emotions } = this.props
     return (

@@ -52,10 +52,10 @@ The concept and implementation for Gratitude APPtitude was created between 29 Ma
 ***
 
 ## Requirements
-- [] 2 Schemas
-- [] POST, GET, DELETE operations
+- [X] 2 Schemas
+- [X] POST, GET, DELETE operations
 - [] Display data from each model on frontend
-- [] React Router to navigate between pages
+- [X] React Router to navigate between pages
 - [] Deployed on Heroku
 
 ***
