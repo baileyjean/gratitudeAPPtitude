@@ -38,7 +38,7 @@ const getActionById = async(req,res) => {
 const getActionByEmotionRef = async(req,res) => {
     try {
         const {emotionRef} = req.params;
-        const action = await Action.findById(emotionRef)
+        const action = await Action.find( {emotionRef: {$eq: emotionRef}})
 
         if(action){
             return res.status(200).json({action});

@@ -14,7 +14,7 @@ router.put('/actions/:id', controllers.updateAction)
 
 router.get('/actions/:id', controllers.getActionById)
 
-router.get('/actions/:emotionRef', controllers.getActionByEmotionRef)
+router.get('/action/:emotionRef', controllers.getActionByEmotionRef)
 
 router.get('/comments', controllers.getAllComments)
 
