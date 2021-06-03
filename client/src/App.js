@@ -69,11 +69,16 @@ export default class App extends Component {
             <Route path="/choose-feels" component = {(props) => ( 
               <ChooseFeels {...props} 
                 emotions = {this.state.emotions} 
-                myFeels = {this.state.myFeels} /> )}/>
+                myFeels = {this.state.myFeels}
+                onClick= { () => this.state.getEmotionID(`60b648d6f662260aa81caf29`) }
+              /> 
+            )}/>
             <Route path="/validation" component = {(props) => ( 
               <Validation {...props} 
                 emotions = {this.state.emotions} 
-                myFeels = {this.state.myFeels}/> )}/>
+                myFeels = {this.state.myFeels}
+              /> 
+            )}/>
           </Switch>
         </div>
       </div>
