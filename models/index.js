@@ -1,15 +1,15 @@
 const mongoose = require('mongoose')
 const EmotionSchema = require('./emotion')
 const ActionSchema = require('./action')
-const RatingSchema = require('./rating')
+const CommentSchema = require('./comment')
 
 const Emotion = mongoose.model('emotions', EmotionSchema)
 const Action = mongoose.model('actions', ActionSchema)
-const Rating = mongoose.model('ratings', RatingSchema)
+const Comment = mongoose.model('comments', CommentSchema)
 
 
 module.exports = {
   Emotion,
   Action, 
-  Rating
+  Comment
 }

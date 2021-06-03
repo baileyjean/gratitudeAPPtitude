@@ -14,10 +14,10 @@ router.delete('/actions/:id', controllers.deleteAction)
 
 router.put('/actions/:id', controllers.updateAction)
 
-router.get('/ratings', controllers.getAllRatings)
+router.get('/comments', controllers.getAllComments)
 
-router.post('/rating/:id', controllers.submitRating)
+router.post('/comment', controllers.submitComment)
 
-router.delete('/rating/:id', controllers.deleteRating)
+router.delete('/comment/:id', controllers.deleteComment)
 
 module.exports = router;

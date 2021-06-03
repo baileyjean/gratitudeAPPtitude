@@ -1,5 +1,5 @@
 const { Action } = require('../models/index');
-const { Rating } = require('../models/index');
+const { Comment } = require('../models/index');
 
 const createAction = async (req, res) => {
     try {
@@ -66,33 +66,33 @@ const deleteAction = async (req, res) => {
     }
 }
 
-const getAllRatings = async (req, res) => {
+const getAllComments = async (req, res) => {
     try {
-        const ratings = await Rating.find()
-        return res.status(200).json({ ratings })
+        const comments = await Comment.find()
+        return res.status(200).json({ comments })
     } catch (error) {
         return res.status(500).send(error.message);
     }
 }
 
-const submitRating = async (req, res) => {
+const submitComment = async (req, res) => {
     try {
-        const rating = await new Rating({...req.body, ratingNum: req.params.id})
-        await rating.save()
+        const comment = await new Comment({...req.body})
+        await comment.save()
         return res.status(201).json({
-            rating,
+            comment,
         });
     } catch (error) {
         return res.status(500).json({ error: error.message })
     }
 }
 
-const deleteRating = async (req, res) => {
+const deleteComment = async (req, res) => {
     try {
         const { id } = req.params;
-        const deleted = await Rating.findByIdAndDelete(id)
+        const deleted = await Comment.findByIdAndDelete(id)
         if (deleted) {
-            return res.status(200).send("Rating deleted");
+            return res.status(200).send("Comment deleted");
         }
         throw new Error("Action not found");
     } catch (error) {
@@ -106,7 +106,7 @@ module.exports = {
     getActionById,
     updateAction,
     deleteAction,
-    getAllRatings,
-    submitRating,
-    deleteRating
+    getAllComments,
+    submitComment,
+    deleteComment
 }
