@@ -16,7 +16,8 @@ export default class App extends Component {
       comments: [],
       gratitudeLists: [],
       readingLists: [],
-      actionLists: []
+      actionLists: [],
+      loading: true
     }
   }
 
@@ -29,30 +30,34 @@ export default class App extends Component {
       actionables: resActionables.data.actions, 
       emotions: resEmotions.data.emotions, 
       comments: resComments.data.comments 
+    },
+    () => {
+      this.setState({loading: false})
     })
   }
-
   render() {
-    const actionables = this.state.actionables;
-    this.setState.gratitudeLists = []
-    this.setState.readingLists = []
-    this.setState.actionLists = []
+    console.log(this.state)
+    
+    // const actionables = this.state.actionables;
+    // this.setState.gratitudeLists = []
+    // this.setState.readingLists = []
+    // this.setState.actionLists = []
 
-    for (let i = 0; i < actionables.length; i++) {
-      switch (actionables[i].name) {
-        case 'gratitudeList': 
-          this.state.gratitudeLists.push(actionables[i])
-          break;
-        case 'readingList':
-          this.state.readingLists.push(actionables[i])
-          break;
-        case 'actionList':
-          this.state.actionLists.push(actionables[i])
-          break;
-        default:
-          break;
-      }
-    }
+    // for (let i = 0; i < actionables.length; i++) {
+    //   switch (actionables[i].name) {
+    //     case 'gratitudeList': 
+    //       this.state.gratitudeLists.push(actionables[i])
+    //       break;
+    //     case 'readingList':
+    //       this.state.readingLists.push(actionables[i])
+    //       break;
+    //     case 'actionList':
+    //       this.state.actionLists.push(actionables[i])
+    //       break;
+    //     default:
+    //       break;
+    //   }
+    // }
 
     return (
       <div className="App">
@@ -62,11 +67,14 @@ export default class App extends Component {
         <div>
           <Switch>
             <Route exact path="/" component = { LandingPage } />
-            <Route path="/choose-feels" component = {(props) => ( 
-              <ChooseFeels {...props} 
-                emotions = {this.state.emotions}
-              /> 
-            )}/>
+
+            <Route path="/choose-feels" component = {(props) => 
+              this.state.loading ? <div>Loading</div> : ( 
+                <ChooseFeels {...props} 
+                  emotions = {this.state.emotions}
+                /> 
+              )}/>
+
             <Route path="/emotions/:id" component = {(props) => ( 
               <Validation {...props} 
                 emotions = {this.state.emotions}
