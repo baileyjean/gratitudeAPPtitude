@@ -14,9 +14,6 @@ export default class App extends Component {
       emotions: [],
       actionables: [],
       comments: [],
-      gratitudeLists: [],
-      readingLists: [],
-      actionLists: [],
       loading: true
     }
   }
@@ -31,35 +28,13 @@ export default class App extends Component {
       emotions: resEmotions.data.emotions, 
       comments: resComments.data.comments 
     },
-    // executes a callback once state has been set up!
+    // the below code executes a callback once state has been set up
+    // helps keep pages from breaking if/when there are mounting/setState delays downstream
     () => {
       this.setState({loading: false})
     })
   }
   render() {
-    console.log(this.state)
-    
-    // const actionables = this.state.actionables;
-    // this.setState.gratitudeLists = []
-    // this.setState.readingLists = []
-    // this.setState.actionLists = []
-
-    // for (let i = 0; i < actionables.length; i++) {
-    //   switch (actionables[i].name) {
-    //     case 'gratitudeList': 
-    //       this.state.gratitudeLists.push(actionables[i])
-    //       break;
-    //     case 'readingList':
-    //       this.state.readingLists.push(actionables[i])
-    //       break;
-    //     case 'actionList':
-    //       this.state.actionLists.push(actionables[i])
-    //       break;
-    //     default:
-    //       break;
-    //   }
-    // }
-
     return (
       <div className="App">
         <header>

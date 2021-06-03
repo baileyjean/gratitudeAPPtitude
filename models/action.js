@@ -2,7 +2,7 @@ const { Schema } = require('mongoose')
 
 const Action = new Schema(
   {
-    name: {type: String, isDone: Boolean, required: true},
+    name: {type: String, required: true},
     description: {type: String, required: true},
     emotionRef: {type: Schema.Types.ObjectId, ref: "emotions", required: true}
   },

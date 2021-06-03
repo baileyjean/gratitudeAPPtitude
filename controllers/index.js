@@ -35,6 +35,20 @@ const getActionById = async(req,res) => {
     }
 }
 
+const getActionByEmotionRef = async(req,res) => {
+    try {
+        const {emotionRef} = req.params;
+        const action = await Action.findById(emotionRef)
+
+        if(action){
+            return res.status(200).json({action});
+        }
+        return res.status(404).send(`Action with the specified emotionRef does not exist`)
+    } catch(error){
+        return res.status(500).send(error.message)
+    }
+}
+
 const updateAction = async (req, res) => {
     try {
         const { id } = req.params;
@@ -126,6 +140,7 @@ module.exports = {
     createAction,
     getAllActions,
     getActionById,
+    getActionByEmotionRef,
     updateAction,
     deleteAction,
     getAllComments,
