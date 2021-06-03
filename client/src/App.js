@@ -17,7 +17,8 @@ export default class App extends Component {
       gratitudeLists: [],
       readingLists: [],
       actionLists: [],
-      myFeels: ''
+      myFeelsID: '',
+      myFeel: ''
     }
   }
 
@@ -28,6 +29,11 @@ export default class App extends Component {
     this.setState({ actionables: resActionables.data.actions })
     this.setState({ emotions: resEmotions.data.emotions })
     this.setState({ comments: resComments.data.comments })
+  }
+
+  getEmotionID = async (id) => {
+    const res = await BASE_URL.get(`/emotions/${id}`)
+    this.setState({ myFeelsID: res.data.results })
   }
 
   render() {
@@ -60,8 +66,14 @@ export default class App extends Component {
         <div>
           <Switch>
             <Route exact path="/" component = { LandingPage } />
-            <Route path="/choose-feels" component = {(props) => ( <ChooseFeels {...props} emotions = {this.state.emotions} myFeels = {this.state.myFeels} /> )}/>
-            <Route path="/validation" component = {(props) => ( <Validation {...props} emotions = {this.state.emotions} myFeels = {this.state.myFeels}/> )}/>
+            <Route path="/choose-feels" component = {(props) => ( 
+              <ChooseFeels {...props} 
+                emotions = {this.state.emotions} 
+                myFeels = {this.state.myFeels} /> )}/>
+            <Route path="/validation" component = {(props) => ( 
+              <Validation {...props} 
+                emotions = {this.state.emotions} 
+                myFeels = {this.state.myFeels}/> )}/>
           </Switch>
         </div>
       </div>
