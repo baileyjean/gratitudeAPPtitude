@@ -1,5 +1,4 @@
-const { Action } = require('../models/index');
-const { Comment } = require('../models/index');
+const { Action, Comment, Emotion } = require('../models/index');
 
 const createAction = async (req, res) => {
     try {
@@ -100,6 +99,15 @@ const deleteComment = async (req, res) => {
     }
 }
 
+const getAllEmotions = async (req, res) => {
+    try {
+        const emotions = await Emotion.find()
+        return res.status(200).json({ emotions })
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
+
 module.exports = {
     createAction,
     getAllActions,
@@ -108,5 +116,6 @@ module.exports = {
     deleteAction,
     getAllComments,
     submitComment,
-    deleteComment
+    deleteComment,
+    getAllEmotions
 }

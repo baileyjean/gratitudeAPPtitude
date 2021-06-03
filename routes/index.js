@@ -20,4 +20,6 @@ router.post('/comment', controllers.submitComment)
 
 router.delete('/comment/:id', controllers.deleteComment)
 
+router.get('/emotions', controllers.getAllEmotions)
+
 module.exports = router;

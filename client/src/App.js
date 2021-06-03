@@ -40,6 +40,10 @@ export default class App extends Component {
 
   async componentDidMount() {
     const res = await BASE_URL.get(`/actions`)
+    // const res = await BASE_URL.get(`/actions`)
+    // const res = await BASE_URL.get(`/actions`)
+    // this.setState({ actionables: res.data.actions })
+    // this.setState({ actionables: res.data.actions })
     this.setState({ actionables: res.data.actions })
   }
 
