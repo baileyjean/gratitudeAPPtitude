@@ -70,7 +70,7 @@ export default class App extends Component {
               <ChooseFeels {...props} 
                 emotions = {this.state.emotions} 
                 myFeels = {this.state.myFeels}
-                onClick= { () => this.state.getEmotionID(`60b648d6f662260aa81caf29`) }
+                myFeelsID = {this.state.myFeelsID}
               /> 
             )}/>
             <Route path="/validation" component = {(props) => ( 
