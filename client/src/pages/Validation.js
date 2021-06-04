@@ -17,10 +17,10 @@ export default class Validation extends Component {
     return (
       <div className="container">
         {this.sortActionables().map((action, index) => (
-          <Link to={`/action/${action._id}`} key={action._id}>
+          <div className="emotionContainer">
             <p>{action.name}</p>
             <p>{action.description}</p>
-          </Link>
+          </div>
         )) }
       </div>
       )
