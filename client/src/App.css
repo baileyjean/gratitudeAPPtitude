@@ -52,6 +52,18 @@ form {
   color: black;
 }
 
+.home-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  align-items: center;
+  background-image: url(https://images.pexels.com/photos/220067/pexels-photo-220067.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .landingPage {
   width: 86vw;
   height: 78vh;
@@ -59,6 +71,8 @@ form {
   border-radius: 5px;
   color:black;
   text-align: center;
+  padding: 10px;
+  margin: 5px;
 }
 
 .leftAlignMain {
@@ -75,8 +89,8 @@ form {
 }
 
 .emotionsContainer {
-  width: 100vw;
-  height: 100vh;
+  width: 90vw;
+  height: 80vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -90,7 +104,7 @@ form {
   width: 90%;
   height: 50%;
   margin: 12px;
-  padding: 30px 10px;
+  padding: 30px;
   color: rgb(14, 46, 73);
   background: rgba(255, 255, 255,0.7);
   align-self: center;
@@ -187,6 +201,11 @@ button {
     margin: 0;
   }
 
+  .actionablesContainer h1 {
+    color: rgba(245, 245, 245, 0.856);
+    text-shadow: 2px 2px 5px lightskyblue;
+  }
+
   .actionCard {
     flex-direction: column;
     width: 50vw;
@@ -206,4 +225,6 @@ button {
 
   .actionCard h1 {
     text-align: center;
+    color: black;
+    text-shadow: .5px .5px 2px turquoise;
   }

@@ -16,6 +16,7 @@ export default class Validation extends Component {
   render() {
     return (
       <div className="actionablesContainer">
+        <h1>When you're ready, collapse each item below for guidance.</h1>
         {this.sortActionables().map((action, index) => (
           <div key={index} className="actionCard">
           <details>

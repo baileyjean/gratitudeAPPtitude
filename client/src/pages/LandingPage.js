@@ -17,15 +17,15 @@ export default class LandingPage extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="home-container">
         <div className="landingPage">
           <h1>Gratitude APPtitude</h1>
           <h3>Empowering You to Create a Sustainable Attitude of Gratitude, No Matter Your Mood</h3>
           <hr />
           <div className="leftAlignMain">
             <h4>Gratitude APPtitude is predicated on two ideas:</h4>
-            <li>A new theory in neuropsychological research, which states that the entire spectrum of human emotions can be synthesized down to four basic emotions.</li>
-            <li>The idea that negative emotions are directly proportional to lack of gratitude.</li>
+            <li>A <a href="https://www.cell.com/current-biology/fulltext/S0960-9822(13)01519-4" target="_blank">new theory in neuropsychological research</a>, which states that the entire spectrum of human emotions can be synthesized down to four basic emotions.</li>
+            <li>The idea that <a href="https://positivepsychology.com/neuroscience-of-gratitude/" target="_blank">negative emotions are directly proportional to lack of gratitude</a>.</li>
             <h4>How It Works</h4>
             <p>Through seeking knowledge and awareness about your current emotional state, taking action, and finding gratitude in the moment, Gratitude APPtitude will help guide you to sustainable positivity, and help tackle even the most overwhelming of emotions.</p>
             <p>The hope behind Gratitude APPtitude is that continued use will help you change your perspective and grow your "aptitude for gratitude," thereby improving your mental health.</p>
