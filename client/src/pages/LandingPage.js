@@ -35,10 +35,12 @@ export default class LandingPage extends Component {
             <button>Continue</button>
           </Link>
         </div>
-
-
         <div className="commentContainer">
+        <details>
+          <summary>
+          
           <h4>BEFORE You Continue... Tell Us How You're Feeling Right Now</h4>
+          </summary>
           <div>
             {this.props.comments.map((comment, index) => (
               <div key={index}>
@@ -58,8 +60,9 @@ export default class LandingPage extends Component {
             </input>
             <button>Submit</button>
           </form>
+        </details>
         </div>
-      </div>
+        </div>
     );
   }
 }
