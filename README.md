@@ -1,6 +1,6 @@
 # Gratitude APPtitude (Project 2 - Fullstack App)
-## May/June 2021
-The concept and implementation for Gratitude APPtitude was created between 29 May - 04 Jun 2021.
+## June 2021
+The initial implementation for Gratitude APPtitude was created between 01 Jun - 04 Jun 2021.
 
 ## Idea & Code By: Bailey Leavitt
 
