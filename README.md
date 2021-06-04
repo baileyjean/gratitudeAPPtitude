@@ -66,6 +66,7 @@ The initial implementation for Gratitude APPtitude was created between 01 Jun - 
 ***
 
 ## Future Improvements & Additions
+This is a very bare-bones version of this app, considering that I was only able to spend a few days on it. A few of the first improvements and additions I would like to implement are: expanding the database to include more resources for the users; including a suggestion box for users to add their own resources; checklist functionality for the actionables list.
 
 ***
 
