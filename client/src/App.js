@@ -34,9 +34,12 @@ export default class App extends Component {
 
   handleSubmit = async (e, formData) => {
     e.preventDefault()
-
+    console.log(formData)
+    let obj = {
+      "comment": formData
+    }
     try {
-      const newComment = await BASE_URL.post('/comment', formData)
+      const newComment = await BASE_URL.post('/comment', obj)
 
       console.log(newComment)
 

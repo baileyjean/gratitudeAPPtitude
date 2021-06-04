@@ -90,7 +90,8 @@ const getAllComments = async (req, res) => {
 
 const submitComment = async (req, res) => {
     try {
-        const comment = await new Comment({...req.body})
+        console.log(req.body)
+        const comment = await new Comment(req.body)
         await comment.save()
         return res.status(201).json({
             comment,
