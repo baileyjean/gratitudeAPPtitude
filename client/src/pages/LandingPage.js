@@ -1,8 +1,23 @@
+import e from 'express';
 import React, { Component } from 'react';
 
 
 export default class LandingPage extends Component {
+  constructor() {
+    super()
+    this.state = {
+      comment: ''
+    }
+  }
+
+  handleChange = ({target}) => {
+    this.setState({
+      [target.name]: target.value
+    })
+  }
+
   render() {
+    console.log(this.state)
     console.log(this.props.comments)
     return (
       <div className="container">
@@ -31,13 +46,17 @@ export default class LandingPage extends Component {
               <div key={index}>
                 <p>{comment.comment}</p>
                 <button onClick = {() => this.props.deleteComment(comment._id)}>
-                  Delete
+                  Delete Comment
                 </button>
               </div>
             ))}
           </div>
           <form>
-            <input></input>
+            <input  
+              value = {this.state.comment} 
+              name = "comment"
+              onChange = {this.handleChange}>
+            </input>
           </form>
         </div>
 
