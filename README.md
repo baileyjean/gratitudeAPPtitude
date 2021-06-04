@@ -80,4 +80,5 @@ The initial implementation for Gratitude APPtitude was created between 01 Jun - 
 - *[Computational Models of Face Perception](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5754021/)*
 - *[Only Four Basic Emotions Exist, Researchers Say](http://www.sci-news.com/othersciences/psychology/science-four-basic-emotions-01742.html)*
 - *[Our Basic Emotions](https://online.uwa.edu/infographics/basic-emotions/)*
+- *[Background Image for Landing Page](https://images.pexels.com/photos/220067/pexels-photo-220067.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)*
 
