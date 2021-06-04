@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import ActionableCards from '../components/ActionableCards';
 import { Link } from 'react-router-dom';
 
 export default class Validation extends Component {
@@ -15,7 +14,6 @@ export default class Validation extends Component {
   }
   
   render() {
-    // const { emotions, actionables } = this.props;
     return (
       <div className="container">
         {this.sortActionables().map((action, index) => (
