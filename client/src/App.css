@@ -23,26 +23,29 @@ header {
 }
 
 .container {
-  width: 70vw;
-  height: 70vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-flow: column wrap;
   align-content: center;
+  align-items: center;
   font-size: 1em;
-  padding: 20px;
+  padding: 10px;
   margin: 0;
 }
 
 .commentContainer {
   flex-direction: column;
-  min-height: auto;
-  max-height: 20vh;
+  width: 36vw;
+  min-height: 10vh;
+  max-height: 15vh;
   overflow: scroll;
   text-align: center;
   font-size: small;
   color: black;
   border-radius: 7px;
-  background-color: rgba(147, 221, 255, 0.616);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid gold;
 }
 
 .commentContainer button {
@@ -54,18 +57,18 @@ header {
 }
 
 form {
-  flex-direction: column;
+  padding: 2em;
   text-align: center;
   font-size: small;
   color: black;
 }
 
 .landingPage {
-  margin: 10px;
+  width: 86vw;
+  height: 78vh;
   background: rgba(255, 255, 255,0.7);
   border-radius: 5px;
   color:black;
-  padding: 10px;
   text-align: center;
 }
 

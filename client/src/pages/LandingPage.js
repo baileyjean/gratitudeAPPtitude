@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 
 export default class LandingPage extends Component {
   constructor() {
@@ -16,8 +16,6 @@ export default class LandingPage extends Component {
   }
 
   render() {
-    console.log(this.state)
-    console.log(this.props.comments)
     return (
       <div className="container">
         <div className="landingPage">
@@ -33,13 +31,14 @@ export default class LandingPage extends Component {
             <p>The hope behind Gratitude APPtitude is that continued use will help you change your perspective and grow your "aptitude for gratitude," thereby improving your mental health.</p>
             <br />
           </div>
-          <a href="/choose-feels">
+          <Link to="/choose-feels">
             <button>Continue</button>
-          </a>
+          </Link>
         </div>
 
 
         <div className="commentContainer">
+          <h4>BEFORE You Continue... Tell Us How You're Feeling Right Now</h4>
           <div>
             {this.props.comments.map((comment, index) => (
               <div key={index}>
@@ -54,7 +53,8 @@ export default class LandingPage extends Component {
             <input  
               value = {this.state.comment} 
               name = "comment"
-              onChange = {this.handleChange}>
+              onChange = {this.handleChange}
+              placeholder = "Let It Go Here <3">
             </input>
             <button>Submit</button>
           </form>

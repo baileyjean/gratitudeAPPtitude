@@ -17,7 +17,7 @@ const main = async () => {
     },
     {
       "name": "readingList",
-      "description": "Here is your reading list about happiness.",
+      "description": "Happiness is a wonderful thing, and we are so glad you feel good today. Here is a great article to add to your bookmarks, to help you sustain that positivity: https://www.verywellmind.com/how-gratitude-makes-you-happier-5114446",
       "emotionRef": happy[0]._id
     },
     {
@@ -47,12 +47,12 @@ const main = async () => {
     },
     {
       "name": "readingList",
-      "description": "Here is your reading list about anger.",
+      "description": "One of the best ways to combat negative emotions is through understanding and learning about why you're upset. Try reading: https://www.psychologytoday.com/us/blog/daring-love/202101/accepting-our-anger-during-the-pandemic ",
       "emotionRef": anger[0]._id
     },
     {
       "name": "actionList",
-      "description": "Here are some things you can do to stop being angry.",
+      "description": "HALT: Hungry, Angry, Lonely, Tired. If you feel any of these in relation to your anger, take a moment to yourself; breathe; and try to address one of the root causes in the HALT checklist.",
       "emotionRef": anger[0]._id
     },
     {
@@ -62,12 +62,12 @@ const main = async () => {
     },
     {
       "name": "readingList",
-      "description": "Here is your reading list about disgust.",
+      "description": "Many negative emotions can be simplified down to disgust. Try reading: https://www.verywellmind.com/embrace-negative-emotions-4158317",
       "emotionRef": disgust[0]._id
     },
     {
       "name": "actionList",
-      "description": "Here are some thing you can do to stop being disgusted.",
+      "description": "Try positive envisioning.",
       "emotionRef": disgust[0]._id
     }
   ]
