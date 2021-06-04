@@ -39,13 +39,13 @@ export default class LandingPage extends Component {
         </div>
 
 
-        <div>
+        <div className="commentContainer">
           <div>
             {this.props.comments.map((comment, index) => (
               <div key={index}>
                 <p>{comment.comment}</p>
                 <button onClick = {() => this.props.deleteComment(comment._id)}>
-                  Delete Comment
+                  Delete
                 </button>
               </div>
             ))}
@@ -59,8 +59,6 @@ export default class LandingPage extends Component {
             <button>Submit</button>
           </form>
         </div>
-
-
       </div>
     );
   }

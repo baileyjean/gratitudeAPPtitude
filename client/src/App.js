@@ -20,7 +20,6 @@ export default class App extends Component {
   }
 
   deleteComment = async (id) => {
-    console.log(id)
     try {
       await BASE_URL
         .delete(`/comment/${id}`)
@@ -29,27 +28,22 @@ export default class App extends Component {
           this.setState({comments: updatedComments})
       });
     } catch (error) {
-      throw error
+        throw error
     }
   }
 
   handleSubmit = async (e, formData) => {
     e.preventDefault()
-    console.log(formData)
-    let obj = {
+    let object = {
       "comment": formData
     }
     try {
-      const newComment = await BASE_URL.post('/comment', obj)
-
-      console.log(newComment)
-
+      const newComment = await BASE_URL.post('/comment', object)
       this.setState({ comments: [newComment.data.comment, ...this.state.comments] })
     } catch (error) {
-      throw error
+        throw error
     }
   }
-
 
   async componentDidMount() {
     const resActionables = await BASE_URL.get(`/actions`)
@@ -66,7 +60,8 @@ export default class App extends Component {
     () => {
       this.setState({loading: false})
     })
-  }
+    }
+
   render() {
     return (
       <div className="App">
@@ -99,8 +94,7 @@ export default class App extends Component {
             )}/>
 
             <Route path="/action/:id" component = {(props) => ( 
-                <TakeAction {...props} 
-                  emotions = {this.state.emotions}
+                <TakeAction {...props}
                   actionables = {this.state.actionables}
                 /> 
             )}/>
