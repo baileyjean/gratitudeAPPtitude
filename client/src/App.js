@@ -6,7 +6,6 @@ import Nav from './components/Nav';
 import LandingPage from './pages/LandingPage';
 import ChooseFeels from './pages/ChooseFeels';
 import Validation from './pages/Validation';
-import TakeAction from './pages/TakeAction';
 
 export default class App extends Component {
   constructor(props) {
@@ -91,12 +90,6 @@ export default class App extends Component {
                 emotions = {this.state.emotions}
                 actionables = {this.state.actionables}
               /> 
-            )}/>
-
-            <Route path="/action/:id" component = {(props) => ( 
-                <TakeAction {...props}
-                  actionables = {this.state.actionables}
-                /> 
             )}/>
           </Switch>
         </div>

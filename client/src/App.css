@@ -6,17 +6,6 @@
   background-color: #282c34;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 header {
   display: flex;
   justify-content: space-evenly;
@@ -184,4 +173,37 @@ button {
     content: '✎';
     font-size: 2em;
     cursor: pointer;
+  }
+  
+  .actionablesContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    font-size: 1em;
+    padding: 20px;
+    margin: 0;
+  }
+
+  .actionCard {
+    flex-direction: column;
+    width: 50vw;
+    min-height: 10vh;
+    max-height: 30vh;
+    overflow: scroll;
+    text-align: center;
+    font-size: small;
+    color: black;
+    padding: 2px 10px;
+    margin: 10px;
+    text-align: left;
+    border-radius: 7px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px dotted rgb(202, 184, 236);
+  }
+
+  .actionCard h1 {
+    text-align: center;
   }
