@@ -1,4 +1,3 @@
-import e from 'express';
 import React, { Component } from 'react';
 
 
@@ -51,12 +50,13 @@ export default class LandingPage extends Component {
               </div>
             ))}
           </div>
-          <form>
+          <form onSubmit = {(e) => this.props.handleSubmit(e, this.state.comment)}>
             <input  
               value = {this.state.comment} 
               name = "comment"
               onChange = {this.handleChange}>
             </input>
+            <button>Submit</button>
           </form>
         </div>
 

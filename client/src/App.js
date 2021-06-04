@@ -32,8 +32,18 @@ export default class App extends Component {
     }
   }
 
-  handleSubmit = async () => {
-    
+  handleSubmit = async (e, formData) => {
+    e.preventDefault()
+
+    try {
+      const newComment = await BASE_URL.post('/comment', formData)
+
+      console.log(newComment)
+
+      this.setState({ comments: [newComment.data.comment, ...this.state.comments] })
+    } catch (error) {
+      throw error
+    }
   }
 
 
@@ -66,6 +76,7 @@ export default class App extends Component {
                 {...props}
                 comments = {this.state.comments}
                 deleteComment = {this.deleteComment}
+                handleSubmit = {this.handleSubmit}
               />
             )}/>
 
