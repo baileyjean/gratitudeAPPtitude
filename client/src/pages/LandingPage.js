@@ -38,7 +38,7 @@ export default class LandingPage extends Component {
         <div className="commentContainer">
         <details>
           <summary>
-          <h4>BEFORE You Continue... Tell Us How You're Feeling Right Now</h4>
+          <h4>BEFORE You Continue... Tell Me How You're Feeling Right Now</h4>
           </summary>
           <div>
             {this.props.comments.map((comment, index) => (
