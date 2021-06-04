@@ -21,11 +21,27 @@ export default class App extends Component {
   deleteComment = async (id) => {
     console.log(id)
     try {
-      //await BASE_URL.delete(`/comment/${id}`)
+      await BASE_URL
+        .delete(`/comment/${id}`)
+        .then(() => {
+          let updatedComments = [...this.state.comments].filter(comment => comment._id !== id)
+          this.setState({comments: updatedComments})
+      });
     } catch (error) {
       throw error
     }
   }
+
+  // onDeleteClick (id) {
+  //   axios
+  //     .delete('http://localhost:8082/api/books/'+id)
+  //     .then(res => {
+  //       this.props.history.push("/");
+  //     })
+  //     .catch(err => {
+  //       console.log("Error form ShowBookDetails_deleteClick");
+  //     })
+  // };
 
 
   async componentDidMount() {
