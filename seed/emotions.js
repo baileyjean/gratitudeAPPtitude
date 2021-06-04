@@ -7,19 +7,19 @@ const main = async () => {
   const emotions = [
     {
       name: "Happy",
-      description: "This is happiness"
+      description: "Related emotions: Calm | Cheerful | Content | Energetic | Excited | Playful | Silly"
     }, 
     {
       name: "Sad",
-      description: "This is sadness"
+      description: "Related emotions: Depressed | Distressed | Gloomy | Heartbroken | Melancholy | Pessimistic | Somber"
     },
     {
       name: "Anger",
-      description: "This is anger"
+      description: "Related emotions: Annoyed | Animosity | Exasperated | Impatient | Passionate | Peeved | Resentful"
     },
     {
       name: "Disgust",
-      description: "This is disgust"
+      description: "Related emotions: Abhorrence | Antipathy | Contempt | Detest | Distain | Loath | Revulsion"
     }
   ]
 

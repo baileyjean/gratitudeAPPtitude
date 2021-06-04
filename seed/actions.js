@@ -12,7 +12,7 @@ const main = async () => {
   const actions = [
     {
       "name": "gratitudeList",
-      "description": "Make a gratitude list to express what you are happy about!",
+      "description": "It is so wonderful that you are feeling positively today! However, life comes in waves, and there will surely be a time in the future (hopefully the far future) when your current level of happiness is going to seem unattainable. Leave a message of hope for your future self: write a 10-item minimum gratitude list... but do not stop at 10! Try to write until you literally cannot think of anything else. You can make this a daily practice of adding to the same list, or start a new list every day, or both! Whatever works for you. But keep it somewhere safe so you have a message of hope to yourself in the future.",
       "emotionRef": happy[0]._id
     },
     {
@@ -22,27 +22,27 @@ const main = async () => {
     },
     {
       "name": "actionList",
-      "description": "Here are some things you can do to continue being happy.",
+      "description": "We do not know what you have been doing, but keep it up! If you are not already practicing these actions, try the following to sustain your current level of contentment: exercise regularly (even if you just go for a walk around the block); meditate for at least five minutes every day; drink plenty of water; express love and gratitude often - internally and externally; accept that everyone is having their own journey through life, and find like-minded individuals who mirror the values and qualities you desire; be mindful and present; be kind to yourself; when you start to feel yourself getting down, turn your thoughts to helping another person.",
       "emotionRef": happy[0]._id
     },
     {
       "name": "gratitudeList",
-      "description": "Make a gratitude list so you can stop being sad.",
+      "description": "Sadness is like a large blanket being draped over you; existance feels heavier somehow, and even a simple movement seems to take more effort. To address this, let us start small: try writing just a three-item gratitude list right now. Nothing is too small to include. Try thinking back to the happiest moments of your life, and recognize that you are able to feel that level of happiness BECAUSE of the lows. Forgive yourself for feeling this way, and put yourself on your gratitude list... celebrate any successes you have had lately (even if you only managed to get out of bed today). Gratitude can be found anytime we seek it, if we truly want to get better.",
       "emotionRef": sad[0]._id
     },
     {
       "name": "readingList",
-      "description": "Here is your reading list about sadness.",
+      "description": "There are SO MANY resources out there to help people understand depression and sadness, but we believe one of the most effective things to do when a person is feeling sad is to make sure that person knows they are not alone, and then to normalize what they are feeling. COVID-19 had an unexpectedly positive impact in normalizing the conversation about depression, as the world collectively experienced what so many people were living with every day even before the pandemic. Try reading this article, filled with statistics about depression, sadness, and mental health: https://loudcloudhealth.com/resources/depression-statistics/",
       "emotionRef": sad[0]._id
     },
     {
       "name": "actionList",
-      "description": "Here are some things you can do to stop being sad.",
+      "description": "Sadness, and all its related emotions, can be absolutely debilitating. In fact, this may be the hardest of all four emotions to take action on. However, we know there are a few things you can do right now to help, and we believe in you!! First, take 10 deep breaths. Focus on each breath and try to follow it through your body is you draw it in. Allow your body to express how it feels; recognize any aches or pains, and accept them. Next, stretch your body out, however it feels most comfortable for you. You can lay down, or standup. After you do that, get a glass of water and drink the whole thing. Multiple research studies have suggested that depression is linked to inflammation, so stretching your muscles and drinking water will help reduce that almost immediately. Finally, meditate: if you have never meditated before, that is okay! It can feel intimidating at first, but the primary goal of meditation is to be mindful and present. If you do not practice meditation regularly (and sometimes, even when you do), you will find it difficult to clear your mind, but this is completely normal and okay. There is NO WRONG WAY to meditate! Start off with a short goal for your meditation: five minutes. If you think you are too busy to take five minutes for meditation right now... do ten minutes instead. Everybody has time for this, and your mental and emotional health is absolutely worth that time. Use any resource you want: guided meditations on your favorite music or video app, silent meditation, body-scan meditation, self-guided meditation... again, there is no wrong way to do it. Just give it a try, be gentle with yourself, and try to make these actions a daily practice. Forgive yourself if you fall short of your goal. This is about progress, not perfection. We are proud of you.",
       "emotionRef": sad[0]._id
     },
     {
       "name": "gratitudeList",
-      "description": "Make a gratitude list so you can stop being angry.",
+      "description": "There are a whole spectrum of emotions that boil down to anger, and some are stronger than others. When we feel angry, it blots out all other feelings, and dominates us. But we have the power in this moment, right now, to combat the tyranny of anger. Write a MINIMUM five-item gratitude list, and START that list with being grateful for your anger. Although it is a tyrannical emotion almost nobody enjoys, it indicates that we have the ability to care deeply about someone or something. Find gratitude, first, by thanking the universe and yourself for caring so much.",
       "emotionRef": anger[0]._id
     },
     {
@@ -52,12 +52,12 @@ const main = async () => {
     },
     {
       "name": "actionList",
-      "description": "HALT: Hungry, Angry, Lonely, Tired. If you feel any of these in relation to your anger, take a moment to yourself; breathe; and try to address one of the root causes in the HALT checklist.",
+      "description": "HALT: Hungry, Angry, Lonely, Tired. If you feel any of these in relation to your anger, take a moment to yourself; breathe; and try to address one of the root causes in the HALT checklist. Next, do 10 push-ups and 10 sit-ups... give that anger a release valve. Recognize that this is anger, and accept it. Know that it is just a passing emotion, and try to envision a long train passing you by. This anger is just one of the cars (or maybe a few of the cars)... but the train is still moving, and eventually those cars all pass. So recognize, observe, accept, and let go. Forgive yourself for being angry, and know that it is only a moment.",
       "emotionRef": anger[0]._id
     },
     {
       "name": "gratitudeList",
-      "description": "Make a gratitude list so you can stop being disgusted.",
+      "description": "Identify why you feel this way; take a deep breath; now release and write a minimum of three things you are grateful for today. Try to hyper-focus on each item; close your eyes and envision what ever it is you wrote down. Gratitude is the path back to positivity.",
       "emotionRef": disgust[0]._id
     },
     {
@@ -67,7 +67,7 @@ const main = async () => {
     },
     {
       "name": "actionList",
-      "description": "Try positive envisioning.",
+      "description": "Go for a walk and focus on nature... even if you can only spare 10 minutes. Try positive envisioning as you move your body. Try to find acceptance for what ever is causing this negativity in you. If a person is behind these emotions, try to remember that everybody is on their own journey, innerwardly focused... few people are intentionally harming others, but merely acting out of selfishness. Try to think of times you have been selfish or inconsiderate, and then draw parallels between your behavior and this person you are upset with. Humanize them so you can be freed of your disgust.",
       "emotionRef": disgust[0]._id
     }
   ]
