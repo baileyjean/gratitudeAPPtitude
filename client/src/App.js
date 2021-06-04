@@ -6,6 +6,7 @@ import Nav from './components/Nav';
 import LandingPage from './pages/LandingPage';
 import ChooseFeels from './pages/ChooseFeels';
 import Validation from './pages/Validation';
+import axios from 'axios';
 
 export default class App extends Component {
   constructor(props) {
@@ -20,8 +21,8 @@ export default class App extends Component {
 
   deleteComment = async (id) => {
     try {
-      await BASE_URL
-        .delete(`/comment/${id}`)
+      await axios
+        .delete(`${BASE_URL}/comment/${id}`)
         .then(() => {
           let updatedComments = [...this.state.comments].filter(comment => comment._id !== id)
           this.setState({comments: updatedComments})
@@ -37,7 +38,7 @@ export default class App extends Component {
       "comment": formData
     }
     try {
-      const newComment = await BASE_URL.post('/comment', object)
+      const newComment = await axios.post(`${BASE_URL}/comment`, object)
       this.setState({ comments: [newComment.data.comment, ...this.state.comments] })
     } catch (error) {
         throw error
@@ -45,9 +46,9 @@ export default class App extends Component {
   }
 
   async componentDidMount() {
-    const resActionables = await BASE_URL.get(`/actions`)
-    const resEmotions = await BASE_URL.get(`/emotions`)
-    const resComments = await BASE_URL.get(`/comments`)
+    const resActionables = await axios.get(`${BASE_URL}/actions`)
+    const resEmotions = await axios.get(`${BASE_URL}/emotions`)
+    const resComments = await axios.get(`${BASE_URL}/comments`)
     
     this.setState({ 
       actionables: resActionables.data.actions, 
